@@ -1,0 +1,55 @@
+package pe.edu.galaxy.training.java.ms.ms.gestion.productos.rest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import lombok.extern.slf4j.Slf4j;
+import pe.edu.galaxy.training.java.ms.ms.gestion.productos.dto.ProductoDTO;
+import pe.edu.galaxy.training.java.ms.ms.gestion.productos.service.ProductoService;
+import pe.edu.galaxy.training.java.ms.ms.gestion.productos.service.exception.ServiceException;
+
+import javax.websocket.server.PathParam;
+import static pe.edu.galaxy.training.java.ms.ms.gestion.productos.rest.commons.Constants.*;
+
+@Slf4j
+@RestController
+@RequestMapping(API_PRODUCTOS)
+public class ProductoRest {
+
+	@Autowired
+	private ProductoService productoService;
+	
+	
+    @GetMapping
+    public ResponseEntity<?> findLike(@RequestParam(name = "nombre", defaultValue = "") String nombre){
+        try {
+			return ResponseEntity.ok(productoService.findLike(null));
+		} catch (ServiceException e) {
+		    log.error(e.getMessage(), e);
+		    return ResponseEntity.internalServerError().build();
+		}
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> findById(@PathParam("id") Long id){
+        return null;
+    }
+
+    @PostMapping
+    public ResponseEntity<?> add(@RequestBody @Validated ProductoDTO productoDTO){
+        return null;
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<?> update(@PathParam("id") Long id, @RequestBody @Validated ProductoDTO productoDTO){
+        return null;
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathParam("id") Long id){
+        return null;
+    }
+
+}

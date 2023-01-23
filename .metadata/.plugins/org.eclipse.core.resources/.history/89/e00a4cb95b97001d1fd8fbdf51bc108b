@@ -1,0 +1,4 @@
+package pe.edu.galaxy.training.java.ms.ms.gestion.productos.dto;
+
+public class GenericDTO {
+}

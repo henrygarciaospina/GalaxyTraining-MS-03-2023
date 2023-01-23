@@ -1,0 +1,21 @@
+package pe.edu.galaxy.training.java.ms.ms.gestion.productos.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+import pe.edu.galaxy.training.java.ms.ms.gestion.productos.entity.ProductoEntity;
+
+@SuperBuilder
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@EqualsAndHashCode(callSuper=false)
+public class ProductoDTO extends GenericDTO{
+	
+	private String nombre;
+	private String descripcion;
+    private Double precio;
+	private Integer stock;
+}

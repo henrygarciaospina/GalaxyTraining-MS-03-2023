@@ -1,0 +1,39 @@
+package pe.edu.galaxy.training.java.ms.ms.gestion.productos.rest;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+import pe.edu.galaxy.training.java.ms.ms.gestion.productos.dto.ProductoDTO;
+
+import javax.websocket.server.PathParam;
+
+@RestController
+@RequestMapping
+public class ProductoRest {
+
+    @GetMapping
+    public ResponseEntity<?> findLike(@RequestParam(name = "nombre", defaultValue = "") String nombre){
+        return null;
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> findById(@PathParam("id") Long id){
+        return null;
+    }
+
+    @PostMapping
+    public ResponseEntity<?> add(@RequestBody @Validated ProductoDTO productoDTO){
+        return null;
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<?> update(@PathParam("id") Long id, @RequestBody @Validated ProductoDTO productoDTO){
+        return null;
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathParam("id") Long id){
+        return null;
+    }
+
+}

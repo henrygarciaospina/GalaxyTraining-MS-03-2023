@@ -1,0 +1,26 @@
+package pe.edu.galaxy.training.java.ms.ms.gestion.productos.service;
+
+import org.springframework.stereotype.Service;
+import pe.edu.galaxy.training.java.ms.ms.gestion.productos.dto.ProductoDTO;
+import pe.edu.galaxy.training.java.ms.ms.gestion.productos.service.exception.ServiceException;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+public class ProductoServiceImpl implements ProductoService{
+    @Override
+    public List<ProductoDTO> findLike(ProductoDTO productoDTO) throws ServiceException {
+        return null;
+    }
+
+    @Override
+    public Optional<ProductoDTO> findById(ProductoDTO productoDTO) throws ServiceException {
+        return Optional.empty();
+    }
+
+    @Override
+    public ProductoDTO save(ProductoDTO productoDTO) throws ServiceException {
+        return null;
+    }
+}

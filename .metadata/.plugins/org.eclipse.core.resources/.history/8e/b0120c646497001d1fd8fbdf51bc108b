@@ -1,0 +1,8 @@
+package pe.edu.galaxy.training.java.ms.ms.gestion.productos.configuration;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class BeanConfig {
+
+}

@@ -1,0 +1,5 @@
+package pe.edu.galaxy.training.java.ms.ms.gestion.productos.configuration;
+
+public class BeanConfig {
+
+}

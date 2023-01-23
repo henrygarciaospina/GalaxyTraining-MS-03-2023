@@ -1,0 +1,13 @@
+spring.application,name=ms-gestion-productos
+
+application.title=Microservicios de Productos
+application.version=1.0.0
+application.author=H.G.O
+
+server.port=8081
+server.servlet.context-path=/ms-productos/v1/
+# Oracle
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
+spring.datasource.username=MS_03_2021_PRODUCTOS
+spring.datasource.password=Leandro2009*
+spring.datasource.driver=class-name=oracle.jdbc.driver.OracleDriver
